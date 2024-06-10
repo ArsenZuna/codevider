@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { fetchCats } from "../../utils/plugins/api";
+import {fetchBirds} from "../../utils/plugins/api";
 import AnimalsList from "./AnimalsList";
 import SearchBar from "./SearchBar";
 
-const Cats = () => {
-	const [cats, setCats] = useState([]);
+const Birds = () => {
+	const [birds, setBirds] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState('');
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const catsData = await fetchCats();
-			setCats(catsData);
+			const birdsData = await fetchBirds();
+			setBirds(birdsData);
 			setLoading(false);
 		};
 		fetchData();
@@ -27,11 +27,11 @@ const Cats = () => {
 
 	return (
 		<div>
-			<h2 className="pt-5 text-white">Cats</h2>
+			<h2 className="pt-5 text-white">Birds</h2>
 			<SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-			<AnimalsList animals={cats} category="cat" searchQuery={searchQuery}/>
+			<AnimalsList animals={birds} category="bird" searchQuery={searchQuery}/>
 		</div>
 	);
 };
 
-export default Cats;
+export default Birds;

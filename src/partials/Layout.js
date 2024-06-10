@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from "./Header";
-import Footer from "./Footer";
 
 
 const Layout = ({children}) => {
@@ -10,7 +9,6 @@ const Layout = ({children}) => {
 			<div className="d-flex justify-content-center align-items-center">
 				{children}
 			</div>
-			<Footer/>
 		</div>
 
 	);

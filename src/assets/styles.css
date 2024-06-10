@@ -4,9 +4,9 @@ body {
 
 .animal-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
 }
 
 /*Loader*/
@@ -434,4 +434,21 @@ body {
     from {
         transform: translateX(-99%);
     }
+}
+
+{/*Search Bar*/}
+.input-style {
+    margin: 30px auto;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    outline: none;
+}
+
+.input-style:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }

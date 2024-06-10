@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "../pages/Home";
 import DogsPage from "../pages/DogsPage";
 import CatsPage from "../pages/CatsPage";
+import BirdsPage from "../pages/BirdsPage";
 
 const router = createBrowserRouter([
 	{
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
 	{
 		path: '/cats',
 		element: <CatsPage/>,
+		errorElement: <><h1>404 Not Found</h1></>
+	},
+	{
+		path: '/birds',
+		element: <BirdsPage/>,
 		errorElement: <><h1>404 Not Found</h1></>
 	}
 ])
