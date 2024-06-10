@@ -4,7 +4,7 @@ import AnimalsList from "./AnimalsList";
 import SearchBar from "./SearchBar";
 
 const Dogs = () => {
-	const [dogs, setDogs] = useState([]);  // Initialize as an empty array
+	const [dogs, setDogs] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState('');
 

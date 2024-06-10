@@ -7,7 +7,7 @@ const AnimalsList = ({animals, category, searchQuery}) => {
 	const [showModal, setShowModal] = useState(false);
 
 	const handleCardClick = (animal) => {
-		setSelectedAnimal({ ...animal, category }); // or 'cat', 'bird' based on the animal
+		setSelectedAnimal({ ...animal, category });
 		setShowModal(true);
 	};
 
